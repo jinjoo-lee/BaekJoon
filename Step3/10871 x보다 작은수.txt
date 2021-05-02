@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+		// 첫줄에 입력받을 숫자 갯수와 기준이 되는 숫자 입력
+		StringTokenizer st = new StringTokenizer(bf.readLine());
+		int x = Integer.parseInt(st.nextToken());
+		int y = Integer.parseInt(st.nextToken());
+		
+		// 공백을 기준으로 x개의 숫자 입력
+		st = new StringTokenizer(bf.readLine());
+		for (int i = 0; i < x; i++) {
+			int z = Integer.parseInt(st.nextToken());
+			
+			// y보다 작은 수가 입력된 경우 출력
+			if (z < y) {
+				bw.write(z + " ");
+			}
+		}
+		bw.close();
+	}
+}
