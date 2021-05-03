@@ -1,0 +1,13 @@
+a = int(input()) # a = 26
+num = a
+cnt = 0 # 사이클 수 확인
+
+while True:
+    x = num // 10 # 십의자리(2)
+    y = num % 10 # 일의자리(6)
+    z = (x + y) % 10 # (2+6) = 8의 일의자리(8)
+    num = (y * 10) + z # (6*10) + 8 = 68
+    cnt += 1 # 사이클 수 +1
+    if num == a: # num이랑 입력값(a)이 같으면
+        break
+print(cnt)
