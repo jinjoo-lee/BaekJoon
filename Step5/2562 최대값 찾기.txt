@@ -1,0 +1,9 @@
+num = []
+
+for i in range(0,9):
+    num.append(int(input()))
+
+x = max(num)
+print(x)
+print(num.index(x)+1)
+

@@ -1,0 +1,13 @@
+n = int(input())
+
+for i in range(n):
+    a = list(map(int, input().split()))
+    mean = sum(a[1:]) / a[0]
+    # a[0] : 학생 수, a[1:] : 점수
+    cnt = 0
+    for j in a[1:]:
+        if j > mean:
+            cnt += 1
+    rate = cnt/a[0] * 100
+    print(f'{rate:.3f}%')
+    # 소수 3번째까지 출력
