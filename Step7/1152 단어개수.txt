@@ -1,0 +1,3 @@
+n = input().split()
+# len() :  입력값의 길이(요소의 전체 개수)를 리턴
+print(len(n))
