@@ -1,0 +1,16 @@
+n = int(input())
+
+line = 0 # 사선라인
+max = 0 # 입력된 숫자 라인에서 가장 큰 숫자
+while n > max:
+    line += 1
+    max += line
+
+a = max - n
+if line % 2 == 0: # 라인이 짝수번째 일 때
+    top = line - a # 분자
+    under = a + 1 # 분모
+else: # 홀수번째 일 때
+    top = a + 1
+    under = line - a
+print(f'{top}/{under}')
