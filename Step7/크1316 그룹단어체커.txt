@@ -1,0 +1,14 @@
+a = int(input())
+cnt = 0
+
+for i in range(a):
+    b = input()
+    error = 0
+    for j in range(len(b)-1): # 인덱스 범위 생성 : 0부터 단위개수-1 까지
+        if b[j] != b[j+1]: # 연이은 두 문자가 다를 때
+            c = b[j+1:] # 현재 글자 이후 문자열을 새로운 단어로 생성
+            if c.count(b[j]) > 0: # 생성된 문자열에서 현재글자가 있다면
+                error += 1
+    if error == 0: # 그룹단어인 경우
+        cnt += 1
+print(cnt)

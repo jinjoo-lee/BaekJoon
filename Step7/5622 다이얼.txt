@@ -1,0 +1,10 @@
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+n = input()
+cnt = 0
+
+for i in range(len(n)):
+    for j in dial: # dial 리스트에서 각 요소를 하나씩 꺼내 한글자씩 분리
+        if n[i] in j:
+            cnt += dial.index(j) + 3
+
+print(cnt)
